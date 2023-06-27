@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/imagens/logo-navegador.png"
+    alt="Duas flechas alaranjadas em direções opostas">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Título da página -->
+  <h1>Conversor de Unidades</h1>
+
+  <div class="container">
+    <!-- Campo de entrada para o valor -->
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" step="any">
+
+    <!-- Dropdown para selecionar a categoria -->
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" onchange="atualizarOpcoes()">
+      <option value="">Selecione uma categoria</option>
+      <option value="comprimento">Comprimento</option>
+      <option value="peso">Peso</option>
+      <option value="temperatura">Temperatura</option>
+    </select>
+
+    <!-- Dropdown para selecionar a unidade de origem -->
+    <label for="unidadeOrigem">Unidade de Origem:</label>
+    <select id="unidadeOrigem"></select>
+
+    <!-- Dropdown para selecionar a unidade de destino -->
+    <label for="unidadeDestino">Unidade de Destino:</label>
+    <select id="unidadeDestino"></select>
+
+    <!-- Botão para realizar a conversão -->
+    <button onclick="converter()">Converter</button>
+
+    <!-- Resultado da conversão -->
+    <p id="resultado"></p>
+  </div>
+
+  <!-- Rodapé da página -->
+  <footer>Pan Gonçalves - Resilia - 2023 &copy;</footer>
+
+  <!-- Script JavaScript -->
+  <script src="./script.js"></script>
+</body>
+
+</html>

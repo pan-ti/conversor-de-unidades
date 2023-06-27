@@ -1,0 +1,131 @@
+/* Reset Css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace
+}
+body {
+    background: linear-gradient(black, green);
+    font-family: 'Courier New', Courier, monospace
+}
+
+/* Container principal */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 6%;
+    padding: 20px;
+    background-color: #ffffff1f;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid;
+    border-image: linear-gradient(to right, green, black, green) 1;
+    /* Define um gradiente linear como imagem de borda */
+    animation: border-animation 5s linear infinite;
+    /* Aplica uma animação à imagem de borda */
+}
+
+@keyframes border-animation {
+    /* Define os estágios da animação de gradiente de borda */
+    0% {
+        border-image-source: linear-gradient(to right, green, black, green);
+        border-image-slice: 1;
+    }
+    50% {
+        border-image-source: linear-gradient(to right, black, green, black);
+        border-image-slice: 1;
+    }
+    100% {
+        border-image-source: linear-gradient(to right, green, black, green);
+        border-image-slice: 1;
+    }
+}
+
+/* Estilo para o título */
+h1 {
+    margin-top: 2%;
+    color: green;
+    text-align: center;
+}
+
+/* Estilos para o formulário */
+form {
+    margin-top: 20px;
+}
+
+label {
+    color: aliceblue;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select,
+input[type="number"] {
+    background-color: #99949489;
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid #999494;
+}
+
+input {
+    font-weight: bold;
+    background-color: #99949481;
+}
+
+/* Estilos para o botão */
+button {
+    width: 40%;
+    padding: 10px;
+    background-color: #030303;
+    color: aliceblue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0fa064;
+    color: black;
+    transition: 0.3s all;
+}
+
+/* Estilos para o elemento #resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f229;
+    border-radius: 4px;
+}
+
+#resultado strong {
+    font-weight: bold;
+}
+
+/* Estilos para o rodapé */
+footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+/* Media queries para tornar o CSS responsivo */
+
+/* Quando a largura da tela for menor ou igual a 600px */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        margin-top: 10%;
+    }
+}
+
+/* Quando a largura da tela for menor ou igual a 400px */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+}
